@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Basic page needs-->
+    <title>Containerization</title>
+    <meta charset="UTF-8"/>
+    <meta name="author" content=""/>
+    <meta name="description" content=""/>
+    <meta name="keywords" content=""/>
+    <!-- Mobile specific metas-->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="images/favicon.ico"/>
+    <!-- Google Web Fonts-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Unna"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli"/>
+    <!-- Vendor CSS-->
+    <!-- Theme CSS-->
+    <link rel="stylesheet" media="all" href="css/style.css"/>
+    <link rel="stylesheet" media="all" href="css/bootstrap.temp.css"/>
+    <!-- Vendor JS-->
+    <script src="vendors/modernizr.js"></script>
+
+    <!-- From index -->
+    <link rel="stylesheet" href="css/bounce.css">
+    <link rel="stylesheet" href="fonticons/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+</head>
+
+
+<body class="apo-header-vertical-left">
+<!-- Preloader-->
+<div id="loader">
+    <div class="load-three-bounce">
+        <div class="load-child bounce1"></div>
+        <div class="load-child bounce2"></div>
+        <div class="load-child bounce3"></div>
+    </div>
+</div>
+<nav class="navbar navbar-expand-md fixed-top navbar-dark bg-dark">
+    <a href="./index.html" class="logo-wrapper margin-l-30 margin-t-30"
+       data-ckav-smd="margin-t-10 margin-l-10 margin-b-10 width-px-60">
+        <img src="images/logo-blog.png" alt="page">
+    </a>
+    <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="./index.html">Home </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./about.html">About</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link active dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown"
+                   aria-haspopup="true" aria-expanded="false">Blogs<span class="sr-only">(current)</span></a>
+                <div class="dropdown-menu" aria-labelledby="dropdown01">
+                    <a class="dropdown-item" href="./TheInventionoftheInternet.html">The Invention of the Internet</a>
+                    <a class="dropdown-item" href="./BrowserWars.html">Browser Wars</a>
+                    <a class="dropdown-item" href="./Dotcombubble.html">Dot com bubble</a>
+                    <a class="dropdown-item active" href="#">Internet Search</a>
+                    <a class="dropdown-item" href="./InternetPeople.html">People</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container">
+    <main class="apo-section apo-section-thin">
+
+        <div class="apo-section apo-medium">
+            <!-- Article-->
+            <article class="apo-entry apo-single">
+                <!-- Article Media-->
+                <div class="apo-entry-media"><img src="images/cntnrz.jpeg" alt=""/></div>
+                <!-- End of Article Media-->
+                <!-- Article Content-->
+                <div class="apo-entry-content-wrap">
+                    <header class="apo-entry-header">
+                        <h2 class="apo-entry-title">Containerization</h2>
+                        <ul class="apo-entry-meta">
+                            <li>Author: <a href="#">Sheethal</a></li>
+                            <li>Published in: <a href="#">18 October 2020</a></li>
+                            <li>Categories: <a href="#">Containers</a>, <a href="#">Application</a></li>
+                        </ul>
+                    </header>
+                    <div class="apo-entry-content">
+                        <p>In traditional software development, code developed in one computing environment often runs
+                            with bugs and errors when deployed in another environment..</p>
+                        <p>Software developers solve this problem by running software in ‘containers’ in the cloud.
+                            Containerization involves bundling an application together with all of its related
+                            configuration files, libraries and dependencies required for it to run in an efficient and
+                            bug-free way across different computing environments.</p>
+                        <div class="wp-caption"><img src="images/ship.jpeg" alt=""/></div>
+                        <p>The most popular containerization ecosystems are Docker and Kubernetes.
+                            Containers are an abstraction of the application layer (meaning that each container
+                            simulates a different software application). Though each container runs isolated processes,
+                            multiple containers share a common Operating System.
+                        </p>
+                        <p>Running software in containerized environments generally uses less space and memory than
+                            running software within different VMs.</p>
+                        <p>Application containerization is a positive development for distributed applications and
+                            micro-services because each container operates independently of the others. Because each
+                            container operates independently of others it helps prevent interdependencies and also
+                            safeguards from a single point of failure. Each application or micro-service communicates
+                            with the others through their APIs. The container virtualization layer is also extremely
+                            flexible and can scale up micro-services to meet rising demand for an application component
+                            and distribute the load.</p>
+                        <p>Containerization presents two security challenges. First, since containerized applications
+                            share a common Operating System, security threats to the Operating System can affect the
+                            whole system. Second, and related, security scanners in containerized environments generally
+                            protect the Operating System but not the application containers, leaving the latter
+                            vulnerable. At the same time, containerization also bolsters security since it isolates
+                            application containers to a significant degree. </p>
+                        <div class="wp-caption"><img src="images/container.png" alt=""/></div>
+                        <p>Containerization is a major trend in software development and is its adoption will likely
+                            grow in both magnitude and speed. Large players like Google and IBM are making big bets on
+                            containerization. Additionally, an enormous startup ecosystem is forming to enable
+                            containerization. Containerization’s proponents believe that it allows developers to create
+                            and deploy applications faster and more securely than traditional methods. While
+                            containerization is expensive, its costs are expected to fall significantly as
+                            containerization environments develop and mature. Containerization is thus likely to
+                            become the new norm for software development. </p>
+                    </div>
+                    <footer class="apo-entry-footer">
+                        <div class="row apo-table-row-md">
+                            <div class="col-md-6">
+                                <div class="apo-inline-block">
+                                    <div class="apo-named-element"><span class="apo-named-element-caption">Next: </span>
+                                        <div class="apo-named-element-container">
+                                            <ul class="apo-entry-tags">
+                                                <li><a href="./TheInventionoftheInternet.html">Invention</a></li>
+                                                <li><a href="./BrowserWars.html">Wars</a></li>
+                                                <li><a href="./Dotcombubble.html">Dot Com</a></li>
+                                                <li><a href="./InternetPeople.html">People</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="apo-inline-block">
+                                    <div class="apo-named-element"><span
+                                            class="apo-named-element-caption">Contact Us:</span>
+                                        <div class="apo-named-element-container">
+                                            <!-- Social Networks-->
+                                            <ul class="apo-social-networks">
+                                                <li><a href="https://github.com/ssm29njit"
+                                                       class="button button-icon radius-full margin-r-10 color-button-white border-glass"><i
+                                                        class="fab fa-github">S</i></a></li>
+                                                <li><a href="https://github.com/JedidiahJohnNagarajan"
+                                                       class="button button-icon radius-full margin-r-10 color-button-white border-glass"><i
+                                                        class="fab fa-github">J</i></a></li>
+                                                <li><a href="https://www.linkedin.com/in/sheethal-mathew-4579a0a5/"
+                                                       class="button button-icon radius-full margin-r-10 color-button-white border-glass"><i
+                                                        class="fab fa-linkedin">S</i></a></li>
+                                                <li><a href="https://www.linkedin.com/in/jedidiahjohn/"
+                                                       class="button button-icon radius-full margin-r-10 color-button-white border-glass"><i
+                                                        class="fab fa-linkedin">J</i></a></li>
+                                            </ul>
+                                            <!-- End Social Networks-->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </footer>
+                </div>
+                <!-- End of Article Content-->
+            </article>
+            <!-- End Article-->
+        </div>
+        <hr/>
+    </main>
+</div>
+</div>
+<!-- End Page Content-->
+<!-- Page Content-->
+
+<!-- Footer-->
+
+<!-- Vendor JS-->
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"
+        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+<script src="vendors/handlebars-v4.0.5.js"></script>
+<script src="vendors/wt.validator.min.js"></script>
+<script src="vendors/jquery.easing.1.3.min.js"></script>
+<script src="vendors/mad.accordion.js"></script>
+<script src="vendors/mad.customselect.js"></script>
+<script src="vendors/mad.tabs.js"></script>
+<script src="vendors/wat.counters.js"></script>
+<script src="vendors/wt.jquery.nav.1.0.js"></script>
+<script src="vendors/isotope.pkgd.min.js"></script>
+<script src="vendors/imagesloaded.pkgd.min.js"></script>
+<script src="vendors/fancybox/jquery.fancybox.min.js"></script>
+<script src="vendors/appear.min.js"></script>
+<script src="vendors/owl-carousel/owl.carousel.min.js"></script>
+<script src="vendors/mCustomScrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="vendors/arcticmodal/jquery.arcticmodal-0.3.min.js"></script>
+<!-- Theme JS-->
+<script src="js/apolo.core.js"></script>
+<script src="js/modules/apolo.newsletter.js"></script>
+<script src="js/modules/apolo.sameheight.js"></script>
+<script src="js/modules/apolo.appear.js"></script>
+<script src="js/modules/apolo.isotope.js"></script>
+<script src="js/apolo.init.js"></script>
+
+
+<!-- COMMON VENDOR SCRIPTS -->
+<script src="vendor/jquery/jquery-3.3.1.min.js"></script>
+<script src="vendor/jquery/jquery-migrate-3.0.0.min.js"></script>
+<script src="vendor/popper/umd/popper.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="vendor/jquery-validation/jquery.validate.min.js"></script>
+<script src="vendor/sweetalert/sweetalert2.min.js"></script>
+<script src="vendor/jarallax/jarallax.min.js"></script>
+<script src="vendor/owlcarousel/owl.carousel.min.js"></script>
+<script src="vendor/swiper/js/swiper.min.js"></script>
+<script src="vendor/jQuery-viewport-checker/jquery.viewportchecker.min.js"></script>
+<script src="vendor/enquire/enquire.min.js"></script>
+<script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+<script src="vendor/isotope/imagesloaded.pkgd.min.js"></script>
+<script src="vendor/isotope/isotope.pkgd.min.js"></script>
+<script src="vendor/isotope/packery-mode.pkgd.min.js"></script>
+
+<!-- PAGE SPECIFIC VENDOR SCRIPTS -->
+
+<!-- TEMPLATE COMMON SCRIPTS -->
+<script src="js/page-main.js"></script>
+
+</body>
+</html>
