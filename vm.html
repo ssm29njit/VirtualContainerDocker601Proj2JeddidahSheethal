@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Basic page needs-->
+    <title>Virtualization</title>
+    <meta charset="UTF-8"/>
+    <meta name="author" content=""/>
+    <meta name="description" content=""/>
+    <meta name="keywords" content=""/>
+    <!-- Mobile specific metas-->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="images/favicon.ico"/>
+    <!-- Google Web Fonts-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Unna"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli"/>
+    <!-- Vendor CSS-->
+    <!-- Theme CSS-->
+    <link rel="stylesheet" media="all" href="css/style.css"/>
+    <link rel="stylesheet" media="all" href="css/bootstrap.temp.css"/>
+    <!-- Vendor JS-->
+    <script src="vendors/modernizr.js"></script>
+
+    <!-- From index -->
+    <link rel="stylesheet" href="css/bounce.css">
+    <link rel="stylesheet" href="fonticons/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+</head>
+
+
+<body class="apo-header-vertical-left">
+<!-- Preloader-->
+<div id="loader">
+    <div class="load-three-bounce">
+        <div class="load-child bounce1"></div>
+        <div class="load-child bounce2"></div>
+        <div class="load-child bounce3"></div>
+    </div>
+</div>
+<nav class="navbar navbar-expand-md fixed-top navbar-dark bg-dark">
+    <a href="./index.html" class="logo-wrapper margin-l-30 margin-t-30"
+       data-ckav-smd="margin-t-10 margin-l-10 margin-b-10 width-px-60">
+        <img src="images/logo-blog.png" alt="page">
+    </a>
+    <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="./index.html">Home </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./about.html">About</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link active dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown"
+                   aria-haspopup="true" aria-expanded="false">Blogs<span class="sr-only">(current)</span></a>
+                <div class="dropdown-menu" aria-labelledby="dropdown01">
+                    <a class="dropdown-item" href="./TheInventionoftheInternet.html">The Invention of the Internet</a>
+                    <a class="dropdown-item" href="./BrowserWars.html">Browser Wars</a>
+                    <a class="dropdown-item" href="./Dotcombubble.html">Dot com bubble</a>
+                    <a class="dropdown-item" href="./InternetSearch.html">Internet Search</a>
+                    <a class="dropdown-item active" href="#">People</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container">
+    <main class="apo-section apo-section-thin">
+
+        <div class="apo-section apo-medium">
+            <!-- Article-->
+            <article class="apo-entry apo-single">
+                <!-- Article Media-->
+                <div class="apo-entry-media"><img src="images/pexels-photo-2777898.jpeg" alt=""/></div>
+                <!-- End of Article Media-->
+                <!-- Article Content-->
+                <div class="apo-entry-content-wrap">
+                    <header class="apo-entry-header">
+                        <h2 class="apo-entry-title">People</h2>
+                        <ul class="apo-entry-meta">
+                            <li>Author: <a href="#">Sheethal</a></li>
+                            <li>Published in: <a href="#">17 October, 2020</a></li>
+                            <li>Categories: <a href="#">VM</a>, <a href="#">Internet</a></li>
+                        </ul>
+                    </header>
+                    <div class="apo-entry-content">
+                        <p>Virtualization is all about creating a virtual, instead of actual, version of computer
+                            hardware platforms, storage devices, and computer network resources in the computing world.
+                            It requires division of hardware partitions and distributing among the virtual machines
+                            present. This is a resource intensive process. This method requires logical division of
+                            system resources provided by mainframe computers between applications.  .</p>
+                        <p>Hardware virtualization or platform virtualization refers to the creation of a virtual
+                            machine that acts like a real computer with operating system. Hardware resources are
+                            separated from software executed on these virtual machines. An example would be, a computer
+                            might have Microsoft Windows base OS on top of underlying hardware, and the same computer
+                            may virtually host Ubuntu Linux operating system, where Ubuntu software can be run on the
+                            virtual machine.</p>
+                        <div class="wp-caption"><img src="images/virtual-app.jpg
+" alt=""/></div>
+                        <p>There are two types of virtualization. One, full virtualization; it is a complete simulation
+                            of the actual hardware to allow software environments, including guest operating system and
+                            its apps, to run unmodified. Paravirtualization refers to a situation here guest apps are
+                            executed in their own isolated domains, as if they are running on a separate system, but a
+                            hardware environment is not simulated. Guest programs are required to be modified with
+                            specifics to run in this environment.  .</p>
+                        <p>The main common goal of virtualization is to centralize administrative tasks while improving
+                            scalability and overall hardware-resource utilization. Parallelization of several operating
+                            systems on a single CPU is the main benefit of Virtualization. Parallelism helps reduce
+                            overhead costs and differs from multitasking, involving running of several programs on the
+                            same OS. With Virtualization, enterprises can better manage updates and rapid changes to the
+                            operating system and applications without disruption to the user.</p>
+                        <p>Saved state of virtual machine is called a snapshot, of an exact point of storage. A snapshot
+                            enables the virtual machine’s state at the time of the snapshot to be restored later,
+                            effectively undoing any changes that occurred afterwards. This is essentially a backup
+                            technique, for example, prior to performing a risky operation. Snapshot benefits include
+                            the ability to port it over to another host machine with its own hypervisor. . </p>
+                        <p>If VM temporarily stops, one can snapshot, move to another host, and then resume on the
+                            new host. This method is called migration.
+                            On the other hand, failover,allows VM to continue operations if the host fails. Generally
+                            it occurs if the migration has stopped working.
+                            .</p>
+                        <div class="wp-caption"><img src="images/webdepth.jpeg" alt=""/></div>
+                        <p>Nested Virtualization enables running virtual machine within another VM. As a concept, it is
+                            extendable to an arbitrary depth. It allows running one or multiple hypervisors inside
+                            another hypervisor. The way nested virtualization can be implemented on a particular
+                            computer architecture depends on supported hardware-assisted virtualization capabilities.
+                            In case a device does not support hardware resources to enable nested virtualization,
+                            software techniques are required to enable it.  </p>
+                        <p> Virtual machines running proprietary operating systems require licensing, regardless of the
+                            host machine's operating system.</p>
+                    </div>
+                    <footer class="apo-entry-footer">
+                        <div class="row apo-table-row-md">
+                            <div class="col-md-6">
+                                <div class="apo-inline-block">
+                                    <div class="apo-named-element"><span class="apo-named-element-caption">Next: </span>
+                                        <div class="apo-named-element-container">
+                                            <ul class="apo-entry-tags">
+                                                <li><a href="./TheInventionoftheInternet.html">Invention</a></li>
+                                                <li><a href="./BrowserWars.html">Wars</a></li>
+                                                <li><a href="./Dotcombubble.html">Dot Com</a></li>
+                                                <li><a href="./InternetSearch.html">Search</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="apo-inline-block">
+                                    <div class="apo-named-element"><span
+                                            class="apo-named-element-caption">Contact Us:</span>
+                                        <div class="apo-named-element-container">
+                                            <!-- Social Networks-->
+                                            <ul class="apo-social-networks">
+                                                <li><a href="https://github.com/ssm29njit"
+                                                       class="button button-icon radius-full margin-r-10 color-button-white border-glass"><i
+                                                        class="fab fa-github">S</i></a></li>
+                                                <li><a href="https://github.com/JedidiahJohnNagarajan"
+                                                       class="button button-icon radius-full margin-r-10 color-button-white border-glass"><i
+                                                        class="fab fa-github">J</i></a></li>
+                                                <li><a href="https://www.linkedin.com/in/sheethal-mathew-4579a0a5/"
+                                                       class="button button-icon radius-full margin-r-10 color-button-white border-glass"><i
+                                                        class="fab fa-linkedin">S</i></a></li>
+                                                <li><a href="https://www.linkedin.com/in/jedidiahjohn/"
+                                                       class="button button-icon radius-full margin-r-10 color-button-white border-glass"><i
+                                                        class="fab fa-linkedin">J</i></a></li>
+                                            </ul>
+                                            <!-- End Social Networks-->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </footer>
+                </div>
+                <!-- End of Article Content-->
+            </article>
+            <!-- End Article-->
+        </div>
+        <hr/>
+    </main>
+</div>
+</div>
+<!-- End Page Content-->
+<!-- Page Content-->
+
+<!-- Footer-->
+
+<!-- Vendor JS-->
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"
+        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+<script src="vendors/handlebars-v4.0.5.js"></script>
+<script src="vendors/wt.validator.min.js"></script>
+<script src="vendors/jquery.easing.1.3.min.js"></script>
+<script src="vendors/mad.accordion.js"></script>
+<script src="vendors/mad.customselect.js"></script>
+<script src="vendors/mad.tabs.js"></script>
+<script src="vendors/wat.counters.js"></script>
+<script src="vendors/wt.jquery.nav.1.0.js"></script>
+<script src="vendors/isotope.pkgd.min.js"></script>
+<script src="vendors/imagesloaded.pkgd.min.js"></script>
+<script src="vendors/fancybox/jquery.fancybox.min.js"></script>
+<script src="vendors/appear.min.js"></script>
+<script src="vendors/owl-carousel/owl.carousel.min.js"></script>
+<script src="vendors/mCustomScrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="vendors/arcticmodal/jquery.arcticmodal-0.3.min.js"></script>
+<!-- Theme JS-->
+<script src="js/apolo.core.js"></script>
+<script src="js/modules/apolo.newsletter.js"></script>
+<script src="js/modules/apolo.sameheight.js"></script>
+<script src="js/modules/apolo.appear.js"></script>
+<script src="js/modules/apolo.isotope.js"></script>
+<script src="js/apolo.init.js"></script>
+
+
+<!-- COMMON VENDOR SCRIPTS -->
+<script src="vendor/jquery/jquery-3.3.1.min.js"></script>
+<script src="vendor/jquery/jquery-migrate-3.0.0.min.js"></script>
+<script src="vendor/popper/umd/popper.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="vendor/jquery-validation/jquery.validate.min.js"></script>
+<script src="vendor/sweetalert/sweetalert2.min.js"></script>
+<script src="vendor/jarallax/jarallax.min.js"></script>
+<script src="vendor/owlcarousel/owl.carousel.min.js"></script>
+<script src="vendor/swiper/js/swiper.min.js"></script>
+<script src="vendor/jQuery-viewport-checker/jquery.viewportchecker.min.js"></script>
+<script src="vendor/enquire/enquire.min.js"></script>
+<script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+<script src="vendor/isotope/imagesloaded.pkgd.min.js"></script>
+<script src="vendor/isotope/isotope.pkgd.min.js"></script>
+<script src="vendor/isotope/packery-mode.pkgd.min.js"></script>
+
+<!-- PAGE SPECIFIC VENDOR SCRIPTS -->
+
+<!-- TEMPLATE COMMON SCRIPTS -->
+<script src="js/page-main.js"></script>
+
+</body>
+</html>
