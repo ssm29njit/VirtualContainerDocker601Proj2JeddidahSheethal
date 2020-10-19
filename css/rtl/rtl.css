@@ -1,0 +1,1436 @@
+/* ------------------------------------------------------
+	Stylesheet for "Right to Left" Layout
+---------------------------------------------------------- */
+body {
+  unicode-bidi: embed;
+  direction: rtl;
+}
+
+.icon-arrow-right::before {
+  content: "\e943";
+}
+
+.icon-arrow-left::before {
+  content: "\e944";
+}
+
+.icon-chevron-right:before {
+    content: "\e93b";
+}
+
+.icon-chevron-left:before {
+    content: "\e93c";
+}
+
+.apo-icon-next:before {
+  content: "\65";
+}
+.apo-icon-prev:before {
+  content: "\62";
+}
+
+/* ------------------------------------------------------
+  1. Global
+------------------------------------------------------ */
+/* ------------------------------------------------------
+        1.2. Reusable Patterns
+    ------------------------------------------------------ */
+/* ------------------------------------------------------
+            1.2.1. Aligner
+        ------------------------------------------------------ */
+.apo-aligner-inner {
+  text-align: right;
+}
+
+.apo-aligner-inner.apo-aligner-x-left {
+  text-align: right;
+}
+
+.apo-aligner-inner.apo-aligner-x-right {
+  text-align: left;
+}
+
+.apo-aligner-inner.apo-aligner-x-center {
+  text-align: center;
+}
+
+/* ------------------------------------------------------
+            1.2.3. Table Row (Extension for 
+            the bootstrap grid system)
+        ------------------------------------------------------ */
+.apo-table-row > [class*="col-"]:first-child {
+  padding-left: 15px;
+  padding-right: 0;
+}
+
+.apo-table-row > [class*="col-"]:last-child {
+  padding-left: 0;
+  padding-right: 15px;
+}
+
+.apo-table-row > [class*="col-"]:last-child:not(:only-child) {
+  text-align: left;
+}
+
+@media all and (min-width: 768px) {
+  .apo-table-row-sm > [class*="col-sm-"]:first-child {
+    padding-left: 15px;
+    padding-right: 0;
+  }
+  .apo-table-row-sm > [class*="col-sm-"]:last-child {
+    padding-left: 0;
+    padding-right: 15px;
+  }
+  .apo-table-row-sm > [class*="col-sm-"]:last-child:not(:only-child) {
+    text-align: left;
+  }
+}
+
+@media all and (min-width: 992px) {
+  .apo-table-row-md > [class*="col-md-"]:first-child {
+    padding-left: 15px;
+    padding-right: 0;
+  }
+  .apo-table-row-md > [class*="col-md-"]:last-child {
+    padding-right: 15px;
+    padding-left: 0;
+  }
+  .apo-table-row-md > [class*="col-md-"]:last-child:not(:only-child) {
+    text-align: left;
+  }
+}
+
+@media all and (min-width: 1200px) {
+  .apo-table-row-lg > [class*="col-lg-"]:first-child {
+    padding-right: 0;
+    padding-left: 15px;
+  }
+  .apo-table-row-lg > [class*="col-lg-"]:last-child {
+    padding-right: 15px;
+    padding-left: 0;
+  }
+  .apo-table-row-lg > [class*="col-lg-"]:last-child:not(:only-child) {
+    text-align: left;
+  }
+}
+
+/* ------------------------------------------------------
+            1.2.4. Named Element
+        ------------------------------------------------------ */
+.apo-named-element-caption {
+  float: right;
+  padding-right: 0;
+  padding-left: 5px;
+}
+
+.apo-named-element-container .apo-social-networks {
+  margin-right: 10px;
+  margin-left: 0;
+}
+
+/* ------------------------------------------------------
+  2. Layout
+------------------------------------------------------ */
+/* ------------------------------------------------------
+        1.1. Fixed Content
+    ------------------------------------------------------ */
+.apo-fixed-content-fixed-col {
+  left: auto;
+  right: 0;
+  padding-right: 19.5%;
+  padding-left: 15%;
+}
+
+.apo-fixed-content-fixed-col::after {
+  right: auto;
+  left: 4%;
+}
+
+.apo-fixed-content-fixed-col + .apo-fixed-content-scroll-col {
+  padding-left: 0;
+  padding-right: 56%;
+}
+
+/* ------------------------------------------------------
+        1.2. Full Height Article
+    ------------------------------------------------------ */
+.apo-fh-article-media {
+  left: auto;
+  right: 0;
+}
+
+.apo-fh-article-media .apo-aligner-inner {
+  text-align: center;
+}
+
+.apo-fh-article-content {
+  left: auto;
+  right: 42.5%;
+  padding-right: 130px;
+  padding-left: 350px;
+}
+
+/* ------------------------------------------------------
+  3. General Classes
+------------------------------------------------------ */
+.apo-align-center {
+  text-align: center;
+}
+
+.apo-align-right {
+  text-align: left;
+}
+
+.apo-align-left {
+  text-align: right;
+}
+
+/* ------------------------------------------------------
+    4. Typography
+------------------------------------------------------ */
+/* ------------------------------------------------------
+        4.1. Dropcap
+    ------------------------------------------------------ */
+.apo-dropcap::first-letter {
+  float: right;
+  margin-right: 0;
+  margin-left: 10px;
+}
+
+/* ------------------------------------------------------
+    5. Header
+------------------------------------------------------ */
+.apo-header:not(.apo-header-vertical) .apo-header-component-last {
+  text-align: left;
+}
+
+/* ------------------------------------------------------
+        5.2. Side Header
+    ------------------------------------------------------ */
+body.apo-header-vertical-left {
+  margin-left: 0;
+  margin-right: 100px;
+}
+
+body.apo-header-vertical-right {
+  margin-right: 0;
+  margin-left: 100px;
+}
+
+body.apo-header-vertical-right .apo-header.apo-header-vertical {
+  right: auto;
+  left: 0;
+}
+
+.apo-header-vertical {
+  left: auto;
+  right: 0;
+}
+
+/* ------------------------------------------------------
+        5.2. Hidden Side Column
+    ------------------------------------------------------ */
+.apo-hidden-column-initialized.apo-hidden-column-left .apo-page,
+.apo-hidden-column-initialized.apo-hidden-column-left .apo-footer {
+  left: auto;
+  right: 0;
+}
+
+.apo-hidden-column-initialized.apo-hidden-column-right .apo-page,
+.apo-hidden-column-initialized.apo-hidden-column-right .apo-footer {
+  right: auto;
+  left: 0;
+}
+
+.apo-hidden-column-initialized.apo-hidden-column-left.apo-hidden-column-opened .apo-page,
+.apo-hidden-column-initialized.apo-hidden-column-left.apo-hidden-column-opened .apo-footer,
+.apo-hidden-column-initialized.apo-hidden-column-left.apo-hidden-column-opened .apo-fixed-content-fixed-col,
+.apo-hidden-column-initialized.apo-hidden-column-left.apo-hidden-column-opened .apo-full-page-fixed-col {
+  left: auto;
+  right: 375px;
+}
+
+.apo-header-vertical-left.apo-hidden-column-initialized.apo-hidden-column-left.apo-hidden-column-opened .apo-page,
+.apo-header-vertical-left.apo-hidden-column-initialized.apo-hidden-column-left.apo-hidden-column-opened .apo-footer,
+.apo-header-vertical-left.apo-hidden-column-initialized.apo-hidden-column-left.apo-hidden-column-opened .apo-fixed-content-fixed-col,
+.apo-header-vertical-left.apo-hidden-column-initialized.apo-hidden-column-left.apo-hidden-column-opened .apo-full-page-fixed-col {
+  left: auto;
+  right: 275px;
+}
+
+.apo-no-csstransforms3d .apo-hidden-column-left .apo-hidden-column {
+  left: auto;
+  right: -376px;
+}
+
+.apo-csstransforms3d .apo-hidden-column-left .apo-hidden-column {
+  left: auto;
+  right: 0;
+  -webkit-transform: translate3d(100%, 0, 0);
+          transform: translate3d(100%, 0, 0);
+}
+
+.apo-csstransforms3d .apo-hidden-column-left .apo-hidden-column {
+  left: auto;
+  right: 0;
+}
+
+.apo-no-csstransforms3d .apo-hidden-column-right .apo-hidden-column {
+  left: -376px;
+  right: auto;
+}
+
+.apo-csstransforms3d .apo-hidden-column-right .apo-hidden-column {
+  right: auto;
+  left: 0;
+}
+
+.apo-hidden-column-initialized.apo-hidden-column-right.apo-hidden-column-opened .apo-page,
+.apo-hidden-column-initialized.apo-hidden-column-right.apo-hidden-column-opened .apo-footer {
+  left: 375px;
+  right: auto;
+}
+
+.apo-header-vertical-right.apo-hidden-column-initialized.apo-hidden-column-right.apo-hidden-column-opened .apo-page,
+.apo-header-vertical-right.apo-hidden-column-initialized.apo-hidden-column-right.apo-hidden-column-opened .apo-footer {
+  left: 275px;
+  right: auto;
+}
+
+.apo-no-csstransforms3d .apo-hidden-column-opened.apo-hidden-column-left .apo-hidden-column {
+  left: auto;
+  right: 0;
+}
+
+.apo-no-csstransforms3d .apo-hidden-column-opened.apo-hidden-column-right .apo-hidden-column {
+  right: auto;
+  left: 0;
+}
+
+.apo-close-btn .icon {
+  margin-right: 0;
+  margin-left: 7px;
+}
+
+.apo-hidden-column .apo-has-children .apo-sub-menu {
+  padding-right: 30px;
+  padding-left: 0;
+}
+
+/* ------------------------------------------------------
+    6. Page Header
+------------------------------------------------------ */
+.apo-page-header-column:first-child:not(:only-child) {
+  padding-left: 15px;
+  padding-right: 0;
+}
+
+.apo-page-header-column:last-child:not(:only-child) {
+  text-align: left;
+  padding-right: 15px;
+  padding-left: 0;
+}
+
+.apo-page-header.apo-style-3 .apo-page-title {
+  padding-right: 70px;
+  padding-left: 0;
+}
+
+.apo-page-header.apo-style-3 .apo-page-title::before {
+  left: auto;
+  right: 0;
+}
+
+/* ------------------------------------------------------
+        6.1. Breadcrumbs
+    ------------------------------------------------------ */
+.apo-breadcrumbs > li:not(:last-child)::after {
+  margin-right: 20px;
+  margin-left: 15px;
+}
+
+/* ------------------------------------------------------
+    7. Content Elements
+------------------------------------------------------ */
+/* ------------------------------------------------------
+        7.1. Forms
+    ------------------------------------------------------ */
+/* ------------------------------------------------------
+            7.2. Select
+        ------------------------------------------------------ */
+.apo-selected-option {
+  padding-right: 30px;
+  padding-left: 70px;
+}
+
+.apo-selected-option::before, .apo-selected-option::after {
+  right: auto;
+  left: 28px;
+}
+
+/* ------------------------------------------------------
+            7.3. Oneline Form
+        ------------------------------------------------------ */
+.apo-oneline-form input[type="text"],
+.apo-oneline-form input[type="email"],
+.apo-oneline-form input[type="password"],
+.apo-oneline-form input[type="number"],
+.apo-oneline-form input[type="search"],
+.apo-oneline-form input[type="url"],
+.apo-oneline-form input[type="date"],
+.apo-oneline-form input[type="datetime-local"],
+.apo-oneline-form input[type="month"],
+.apo-oneline-form input[type="tel"],
+.apo-oneline-form input[type="time"],
+.apo-oneline-form input[type="week"] {
+  padding-right: 30px;
+  padding-left: 60px;
+}
+
+.apo-oneline-form button {
+  right: auto;
+  left: 15px;
+}
+
+.apo-footer .apo-oneline-form button {
+  right: auto;
+  left: 0;
+}
+
+.apo-hidden-column .apo-oneline-form input[type="text"],
+.apo-hidden-column .apo-oneline-form input[type="email"],
+.apo-hidden-column .apo-oneline-form input[type="password"],
+.apo-hidden-column .apo-oneline-form input[type="number"],
+.apo-hidden-column .apo-oneline-form input[type="search"],
+.apo-hidden-column .apo-oneline-form input[type="url"],
+.apo-hidden-column .apo-oneline-form input[type="date"],
+.apo-hidden-column .apo-oneline-form input[type="datetime-local"],
+.apo-hidden-column .apo-oneline-form input[type="month"],
+.apo-hidden-column .apo-oneline-form input[type="tel"],
+.apo-hidden-column .apo-oneline-form input[type="time"],
+.apo-hidden-column .apo-oneline-form input[type="week"] {
+  padding-left: 0;
+  padding-right: 38px;
+}
+
+.apo-hidden-column .apo-oneline-form button[type="submit"] {
+  right: 0;
+  left: auto;
+}
+
+/* ------------------------------------------------------
+        7.2. Lists
+    ------------------------------------------------------ */
+.apo-hr-dotted-list {
+  margin-left: 0;
+  margin-right: -7px;
+}
+
+.apo-hr-dotted-list > li {
+  padding-left: 0;
+  padding-right: 5px;
+}
+
+.apo-hr-dotted-list > li:not(:last-child) {
+  padding-left: 13px;
+  padding-right: 5px;
+}
+
+.apo-hr-dotted-list > li:not(:last-child)::after {
+  right: auto;
+  left: 0;
+}
+
+/* ------------------------------------------------------
+        7.3. Alert Boxes
+    ------------------------------------------------------ */
+.apo-alert-box-content {
+  padding-right: 80px;
+  padding-left: 20px;
+}
+
+[class*="apo-alert-box"] .icon,
+[class*="apo-alert-box"] .fa {
+  left: auto;
+  right: 30px;
+}
+
+/* ------------------------------------------------------
+        7.4. Accordion & Toggle
+    ------------------------------------------------------ */
+.apo-accordion-title,
+.apo-toggle-title {
+  padding-right: 0;
+  padding-left: 50px;
+}
+
+.apo-accordion-title::after,
+.apo-accordion-title::before,
+.apo-toggle-title::after,
+.apo-toggle-title::before {
+  right: auto;
+  left: 0;
+}
+
+/* ------------------------------------------------------
+        7.5. Tabs
+    ------------------------------------------------------ */
+/* ------------------------------------------------------
+            7.5.1. Vertical Tabs
+        ------------------------------------------------------ */
+.apo-tabs.apo-vertical-tabs .apo-tabs-nav {
+  margin-right: 0;
+  margin-left: 30px;
+  float: right;
+}
+
+.apo-tabs.apo-vertical-tabs .apo-tabs-nav::before {
+  left: auto;
+  right: 0;
+  border-left: none;
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.apo-tabs.apo-vertical-tabs .apo-tabs-nav > li > a {
+  border-width: 0 1px 0 0;
+}
+
+.apo-tabs.apo-vertical-tabs .apo-tabs-nav > li > a::after {
+  left: auto;
+  right: -4px;
+}
+
+/* ------------------------------------------------------
+        7.6. Buttons
+    ------------------------------------------------------ */
+.apo-btn {
+  padding-right: 0;
+  padding-left: 22px;
+}
+
+.apo-btn::after {
+  content: "\e943";
+  right: auto;
+  left: 0;
+}
+
+.apo-cssanimations .apo-btn:hover::after {
+  right: auto;
+  left: -5px;
+}
+
+.apo-btn-mini {
+  padding-left: 20px;
+}
+
+.apo-btn-large {
+  padding-left: 25px;
+}
+
+.apo-btn-rectangle {
+  padding-right: 60px;
+  padding-left: 65px;
+}
+
+.apo-btn-rectangle::after {
+  right: auto;
+  left: 40px;
+}
+
+.apo-cssanimations .apo-btn-rectangle:hover::after {
+  right: auto;
+  left: 35px;
+}
+
+/* ------------------------------------------------------
+        7.8. Progress Bars
+    ------------------------------------------------------ */
+.apo-progress-bar .apo-progress-bar-indicator {
+  left: auto;
+  right: 0;
+}
+
+.apo-progress-bar .apo-progress-bar-indicator .apo-progress-bar-value {
+  right: auto;
+  left: 0;
+  -webkit-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+}
+
+/* ------------------------------------------------------
+        7.9. Testimonials
+    ------------------------------------------------------ */
+.apo-testimonial::before {
+  left: auto;
+  right: 0;
+}
+
+/* ------------------------------------------------------
+        7.10. Team Members
+    ------------------------------------------------------ */
+
+    .apo-team-member-name a {
+      background-position: 100% 25px;
+    }
+
+/* ------------------------------------------------------
+            7.9.1. Style 2
+        ------------------------------------------------------ */
+.apo-testimonials.apo-style-2 .apo-testimonial-author::before {
+  left: auto;
+  right: 0;
+}
+
+.apo-testimonials.apo-style-2 .apo-testimonial-author-info {
+  padding-left: 0;
+  padding-right: 30px;
+}
+
+/* ------------------------------------------------------
+            7.9.2. Style 3
+        ------------------------------------------------------ */
+.apo-testimonials.apo-style-3 .apo-testimonial::before {
+  right: auto;
+}
+
+/* ------------------------------------------------------
+        7.13. Pagination
+    ------------------------------------------------------ */
+.apo-pagination > li > a {
+  background-position: 100% 29px;
+}
+
+.apo-pagination .current {
+  background-position: 100% 29px;
+}
+
+/* ------------------------------------------------------
+        7.14. Filter
+    ------------------------------------------------------ */
+.apo-filter a {
+  background-position: 100% 28px;
+}
+
+.apo-filter a.apo-active {
+  background-size: 100% 100%;
+}
+
+/* ------------------------------------------------------
+        7.17. Full Page 
+    ------------------------------------------------------ */
+.apo-full-page-fixed-content .apo-full-page-fixed-col {
+  left: auto;
+  right: 0;
+  padding-right: 0;
+  padding-left: 30px;
+}
+
+.apo-full-page-fixed-content .apo-full-page-container {
+  padding-right: 50%;
+  padding-left: 19%;
+}
+
+.apo-full-page-fixed-content #fp-nav.right {
+  right: 5.20;
+  left: auto;
+}
+
+.apo-full-page-fixed-content #fp-nav.left {
+  right: auto;
+  left: 5.20%;
+}
+
+.apo-full-page-controls {
+  right: auto;
+  left: 0;
+  border-width: 0 1px 0 0;
+}
+
+.apo-full-page-controls .apo-language {
+  background-position: 100% 18px;
+}
+
+.apo-fp-menu a {
+  float: left;
+}
+
+.apo-fp-menu a::after {
+  right: auto;
+  left: 0;
+  margin-left: 0;
+  margin-right: 10px;
+}
+
+.apo-fp-menu a span {
+  right: auto;
+  left: 100%;
+  margin-right: 0;
+  margin-left: 10px;
+}
+
+/* ------------------------------------------------------
+        7.23. Striped Photos
+    ------------------------------------------------------ */
+.apo-striped-photo-title a {
+  background-position: 100% 75px;
+}
+
+.apo-striped-photo-categories a {
+  background-position: 100% 22px;
+}
+
+.apo-fp-photo-stream #fp-nav.left {
+  margin-right: 0;
+  margin-left: 75px;
+}
+
+.apo-fp-photo-stream #fp-nav.right {
+  margin-right: 75px;
+  margin-left: 0;
+}
+
+.apo-fp-photo-stream .apo-photo-stream-actions {
+  left: auto;
+  right: 100px;
+}
+/* ------------------------------------------------------
+        7.24. Slider
+    ------------------------------------------------------ */
+.apo-slider-thumbs-hr .swiper-button-prev {
+  left: auto;
+  right: -1px;
+}
+
+.apo-slider-thumbs-hr .swiper-button-next {
+  right: auto;
+  left: -1px;
+}
+
+.apo-revslider-theme .apo-revslider-controls {
+  left: auto;
+  right: 215px;
+}
+
+.apo-header-bottom ~ .apo-page .apo-revslider-theme .apo-revslider-controls.apo-right {
+  right: auto;
+  left: 70px;
+}
+
+.apo-revslider-theme .apo-revslider-controls.apo-right {
+  left: 115px;
+  right: auto;
+}
+
+/* ------------------------------------------------------
+        7.27. Bottom Controls
+    ------------------------------------------------------ */
+.apo-hr-controls .apo-fullscreen-control-close .icon {
+  display: inline-block;
+  margin-right: 0;
+  margin-left: 7px;
+  top: -1px;
+}
+
+.apo-hr-controls-component-last {
+  text-align: left;
+}
+
+/* ------------------------------------------------------
+        7.26. Pricing Tables
+    ------------------------------------------------------ */
+.apo-pricing-table-label {
+  padding-right: 25px;
+  padding-left: 15px;
+  left: auto;
+  right: -10px;
+}
+
+.apo-pricing-table-label::before {
+  left: auto;
+  right: 0;
+  border-width: 13px 10px 0 0;
+}
+
+.apo-pricing-table-list span {
+  margin-right: 0;
+  margin-left: 5px;
+}
+
+/* ------------------------------------------------------
+    8. Sidebar & Widgets
+------------------------------------------------------ */
+.apo-widget-area a {
+  background-position: 100% 18px;
+}
+
+/* ------------------------------------------------------
+        8.1. Contact Info Widget
+    ------------------------------------------------------ */
+.apo-footer .apo-contact-info-widget a {
+  background-position: 100% 33px;
+}
+
+/* ------------------------------------------------------
+        8.2. Tags Widget
+    ------------------------------------------------------ */
+.tagcloud {
+  margin-right: -3px;
+  margin-left: -2px;
+}
+
+.tagcloud a {
+  margin-left: 2px;
+  margin-right: 3px;
+}
+
+/* ------------------------------------------------------
+        8.4. Comment Widgets
+    ------------------------------------------------------ */
+.apo-widget.apo-widget-comments .apo-comment-header a {
+  background-position: 100% 15px;
+}
+
+.apo-widget.apo-widget-comments .apo-comment-author {
+  margin-left: 4px;
+  margin-right: 0;
+}
+
+.apo-widget.apo-widget-comments .apo-comment-entry-title a {
+  background-position: 100% 26px;
+}
+
+/* ------------------------------------------------------
+        8.6. Calendar Widget
+    ------------------------------------------------------ */
+.apo-widget .calendar_wrap table tfoot a {
+  background-position: 100% 18px;
+}
+
+/* ------------------------------------------------------
+    9. Blog
+------------------------------------------------------ */
+/* ------------------------------------------------------
+        9.2. Items
+    ------------------------------------------------------ */
+.apo-entry-categories a {
+  background-position: 100% 15px;
+}
+
+.apo-entry-title a {
+  background-position: 100% 26px;
+}
+
+.apo-entry-tags a {
+  background-position: 100% 18px;
+}
+
+/* ------------------------------------------------------
+            9.2.1. Style 1
+        ------------------------------------------------------ */
+.apo-entries-container.apo-style-1 .apo-entry-header-dublicate {
+  left: auto;
+  right: 0;
+}
+
+.apo-entries-container.apo-style-1 .apo-item.apo-item-size-2x .apo-entry-title a {
+  background-position: 100% 41px;
+}
+
+/* ------------------------------------------------------
+            9.2.2. Style 2
+        ------------------------------------------------------ */
+/* ------------------------------------------------------
+            9.2.4. Style 4
+        ------------------------------------------------------ */
+.apo-entries-container.apo-style-4 .apo-entry-title a {
+  background-position: 100% 41px;
+}
+
+/* ------------------------------------------------------
+            9.2.5. Style 5
+        ------------------------------------------------------ */
+.apo-entries-container.apo-style-5 .apo-entry-title a::before {
+  left: auto;
+  right: 0;
+}
+
+.apo-entries-container.apo-style-5 .apo-entry-title a:hover {
+  padding-left: 0;
+  padding-right: 120px;
+}
+
+/* ------------------------------------------------------
+        9.3. Single
+    ------------------------------------------------------ */
+.apo-entry.apo-single .apo-entry-meta a {
+  display: inline-block;
+  background-position: 100% 18px;
+}
+
+.apo-entry.apo-single .apo-entry-content > p:first-child:first-letter {
+  float: right;
+  margin: 0 0 0 15px;
+}
+
+.comments-list .comment .comment {
+  padding-left: 0;
+  padding-right: 35px;
+}
+
+.comments-list .comment-body {
+  padding-left: 0;
+  padding-right: 100px;
+}
+
+.comments-list .avatar {
+  left: auto;
+  right: 0;
+}
+
+.comments-list .reply {
+  background-position: 100% 15px;
+}
+
+/* ------------------------------------------------------
+    10. Portoflio
+------------------------------------------------------ */
+/* ------------------------------------------------------
+        10.2. Items
+    ------------------------------------------------------ */
+.apo-project-meta > li .fa,
+.apo-project-meta > li [class*="icon"] {
+  margin-right: 0;
+  margin-left: 8px;
+}
+
+/* ------------------------------------------------------
+            10.2.1. Style 1
+        ------------------------------------------------------ */
+.apo-portfolio-container.apo-style-1 .apo-project-title a {
+  float: right;
+  padding-left: 0;
+  margin-left: 0;
+  padding-right: 40px;
+  margin-right: -40px;
+}
+
+.apo-portfolio-container.apo-style-1 .apo-project-title a::before {
+  left: auto;
+  right: 0;
+}
+
+.apo-portfolio-container.apo-style-1 .apo-project-categories a {
+  background-position: 100% 18px;
+}
+
+.apo-portfolio-container.apo-style-1 .apo-project:hover .apo-project-title a {
+  margin-right: 0;
+}
+
+/* ------------------------------------------------------
+            10.2.2. Style 2
+        ------------------------------------------------------ */
+.apo-portfolio-container.apo-style-2 .apo-project a {
+  background-position: 100% 18px;
+}
+
+.apo-portfolio-container.apo-style-2 .apo-project-title a {
+  background-position: 100% 33px;
+}
+
+.apo-portfolio-container.apo-style-2 .apo-project-categories a {
+  background-position: 100% 22px;
+}
+
+/* ------------------------------------------------------
+            10.2.3. Style 3
+        ------------------------------------------------------ */
+.apo-portfolio-container.apo-style-3 .apo-project a {
+  background-position: 100% 22px;
+}
+
+.apo-portfolio-container.apo-style-3 .apo-project-title a {
+  background-position: 100% 40px;
+}
+
+/* ------------------------------------------------------
+            10.2.4. Style 4
+        ------------------------------------------------------ */
+.apo-portfolio-container.apo-style-4 .apo-project a {
+  background-position: 100% 18px;
+}
+
+.apo-portfolio-container.apo-style-4 .apo-project-triangle {
+  right: auto;
+  left: 0;
+}
+
+.apo-portfolio-container.apo-style-4 .apo-project-content-wrap .apo-aligner-inner {
+  padding-right: 30px;
+  padding-left: 60%;
+}
+
+.apo-portfolio-container.apo-style-4 .apo-project-title a {
+  background-position: 100% 22px;
+}
+
+.apo-csstransforms3d .apo-portfolio-container.apo-style-4 .apo-project.apo-project--hover-state .apo-project-media img {
+  -webkit-transform: rotate3d(0, 0, 1, -2deg) scale3d(1.05, 1.05, 1.05);
+          transform: rotate3d(0, 0, 1, -2deg) scale3d(1.05, 1.05, 1.05);
+}
+
+/* ------------------------------------------------------
+            10.2.5. Style 5
+        ------------------------------------------------------ */
+.apo-portfolio-container.apo-style-5 .apo-project a {
+  background-position: 100% 18px;
+}
+
+.apo-portfolio-container.apo-style-5 .apo-project-title {
+  left: auto;
+  right: 0;
+}
+
+.apo-portfolio-container.apo-style-5 .apo-project-title::before {
+  right: auto;
+  left: 100%;
+  margin-right: 0;
+  margin-left: 30px;
+}
+
+.apo-portfolio-container.apo-style-5 .apo-project-title:hover {
+  left: auto;
+  right: 60px;
+}
+
+.apo-portfolio-container.apo-style-5 .apo-project-categories a {
+  background-position: 100% 22px;
+}
+
+/* ------------------------------------------------------
+            10.2.6. Style 6
+        ------------------------------------------------------ */
+.apo-portfolio-container.apo-style-6 .apo-project a {
+  background-position: 100% 18px;
+}
+
+.apo-portfolio-container.apo-style-6 .apo-project-title a {
+  background-position: 100% 33px;
+}
+
+.apo-portfolio-container.apo-style-6 .apo-project-categories a {
+  background-position: 100% 17px;
+}
+
+/* ------------------------------------------------------
+    11. Dedicated Pages
+------------------------------------------------------ */
+/* ------------------------------------------------------
+        11.1. About Me
+    ------------------------------------------------------ */
+
+      .apo-personal-body .apo-contact-info a {
+        background-position: 100% 47px;
+      }
+
+/* ------------------------------------------------------
+        11.2. Contact Us
+    ------------------------------------------------------ */
+
+      .apo-contact-info-section .apo-contact-info a {
+        background-position: 100% 49px;
+      }
+
+/* ------------------------------------------------------
+    11. Footer
+------------------------------------------------------ */
+/* ------------------------------------------------------
+        11.3. Home
+    ------------------------------------------------------ */
+.apo-contact-section-body .apo-contact-info a {
+  background-position: 100% 21px;
+}
+
+.apo-contact-section-footer a {
+  background-position: 100% 18px;
+}
+
+/* ------------------------------------------------------
+    11. Footer
+------------------------------------------------------ */
+.apo-footer .apo-widget .apo-oneline-form input[type="text"],
+.apo-footer .apo-widget .apo-oneline-form input[type="email"],
+.apo-footer .apo-widget .apo-oneline-form input[type="password"],
+.apo-footer .apo-widget .apo-oneline-form input[type="number"],
+.apo-footer .apo-widget .apo-oneline-form input[type="search"],
+.apo-footer .apo-widget .apo-oneline-form input[type="url"],
+.apo-footer .apo-widget .apo-oneline-form input[type="date"],
+.apo-footer .apo-widget .apo-oneline-form input[type="datetime-local"],
+.apo-footer .apo-widget .apo-oneline-form input[type="month"],
+.apo-footer .apo-widget .apo-oneline-form input[type="tel"],
+.apo-footer .apo-widget .apo-oneline-form input[type="time"],
+.apo-footer .apo-widget .apo-oneline-form input[type="week"] {
+  padding-right: 0;
+}
+
+.apo-footer .apo-contact-info-widget a {
+  background-position: 100% 33px;
+}
+
+.apo-footer.apo-style-2 a {
+  background-position: 100% 18px;
+}
+
+/* ------------------------------------------------
+
+    Bootstrap RTL layout
+
+------------------------------------------------ */
+@media only screen and (min-width: 768px) {
+  .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
+    float: right;
+  }
+  .col-sm-offset-12 {
+    margin-left: 0px;
+    margin-right: 100%;
+  }
+  .col-sm-offset-11 {
+    margin-left: 0px;
+    margin-right: 91.66666667%;
+  }
+  .col-sm-offset-10 {
+    margin-left: 0px;
+    margin-right: 83.33333333%;
+  }
+  .col-sm-offset-9 {
+    margin-left: 0px;
+    margin-right: 75%;
+  }
+  .col-sm-offset-8 {
+    margin-left: 0px;
+    margin-right: 66.66666667%;
+  }
+  .col-sm-offset-7 {
+    margin-left: 0px;
+    margin-right: 58.33333333%;
+  }
+  .col-sm-offset-6 {
+    margin-left: 0px;
+    margin-right: 50%;
+  }
+  .col-sm-offset-5 {
+    margin-left: 0px;
+    margin-right: 41.66666667%;
+  }
+  .col-sm-offset-4 {
+    margin-left: 0px;
+    margin-right: 33.33333333%;
+  }
+  .col-sm-offset-3 {
+    margin-left: 0px;
+    margin-right: 25%;
+  }
+  .col-sm-offset-2 {
+    margin-left: 0px;
+    margin-right: 16.66666667%;
+  }
+  .col-sm-offset-1 {
+    margin-left: 0px;
+    margin-right: 8.33333333%;
+  }
+  .col-sm-offset-0 {
+    margin-left: 0px;
+    margin-right: 0;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
+    float: right;
+  }
+  .col-md-offset-12 {
+    margin-left: 0px;
+    margin-right: 100%;
+  }
+  .col-md-offset-11 {
+    margin-left: 0px;
+    margin-right: 91.66666667%;
+  }
+  .col-md-offset-10 {
+    margin-left: 0px;
+    margin-right: 83.33333333%;
+  }
+  .col-md-offset-9 {
+    margin-left: 0px;
+    margin-right: 75%;
+  }
+  .col-md-offset-8 {
+    margin-left: 0px;
+    margin-right: 66.66666667%;
+  }
+  .col-md-offset-7 {
+    margin-left: 0px;
+    margin-right: 58.33333333%;
+  }
+  .col-md-offset-6 {
+    margin-left: 0px;
+    margin-right: 50%;
+  }
+  .col-md-offset-5 {
+    margin-left: 0px;
+    margin-right: 41.66666667%;
+  }
+  .col-md-offset-4 {
+    margin-left: 0px;
+    margin-right: 33.33333333%;
+  }
+  .col-md-offset-3 {
+    margin-left: 0px;
+    margin-right: 25%;
+  }
+  .col-md-offset-2 {
+    margin-left: 0px;
+    margin-right: 16.66666667%;
+  }
+  .col-md-offset-1 {
+    margin-left: 0px;
+    margin-right: 8.33333333%;
+  }
+  .col-md-offset-0 {
+    margin-left: 0px;
+    margin-right: 0;
+  }
+}
+
+@media only screen and (min-width: 1199px) {
+  .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {
+    float: right;
+  }
+  .col-lg-offset-12 {
+    margin-left: 0px;
+    margin-right: 100%;
+  }
+  .col-lg-offset-11 {
+    margin-left: 0px;
+    margin-right: 91.66666667%;
+  }
+  .col-lg-offset-10 {
+    margin-left: 0px;
+    margin-right: 83.33333333%;
+  }
+  .col-lg-offset-9 {
+    margin-left: 0px;
+    margin-right: 75%;
+  }
+  .col-lg-offset-8 {
+    margin-left: 0px;
+    margin-right: 66.66666667%;
+  }
+  .col-lg-offset-7 {
+    margin-left: 0px;
+    margin-right: 58.33333333%;
+  }
+  .col-lg-offset-6 {
+    margin-left: 0px;
+    margin-right: 50%;
+  }
+  .col-lg-offset-5 {
+    margin-left: 0px;
+    margin-right: 41.66666667%;
+  }
+  .col-lg-offset-4 {
+    margin-left: 0px;
+    margin-right: 33.33333333%;
+  }
+  .col-lg-offset-3 {
+    margin-left: 0px;
+    margin-right: 25%;
+  }
+  .col-lg-offset-2 {
+    margin-left: 0px;
+    margin-right: 16.66666667%;
+  }
+  .col-lg-offset-1 {
+    margin-left: 0px;
+    margin-right: 8.33333333%;
+  }
+  .col-lg-offset-0 {
+    margin-left: 0px;
+    margin-right: 0;
+  }
+  .col-lg-offset-0-5 {
+    margin-left: auto;
+    margin-right: 4%;
+  }
+}
+
+/* ------------------------------------------------------
+    12. Media Queries
+------------------------------------------------------ */
+/* ------------------------------------------------------
+        12.1. Tablet (landscape) & Notebook 13'
+    ------------------------------------------------------ */
+@media all and (max-width: 1370px) {
+  .apo-full-page-fixed-content .apo-full-page-container {
+    padding-right: 45%;
+    padding-left: 15%;
+  }
+  .apo-fixed-content-fixed-col {
+    padding-right: 13.5%;
+    padding-left: 8%;
+  }
+  .apo-fh-article-content {
+    right: 36%;
+    left: 0;
+    /* ! */
+    padding-right: 30px;
+    padding-left: 130px;
+  }
+  .apo-has-full-page-controls .apo-full-page-container .container {
+    padding-right: 20px;
+    /* ! */
+    padding-left: 120px;
+  }
+}
+
+@media all and (max-width: 1280px) {
+  .apo-fixed-content-fixed-col {
+    padding-right: 15.5%;
+    padding-left: 10%;
+  }
+  .apo-fp-photo-stream #fp-nav.right {
+    margin-right: 0;
+    /* ! */
+    margin-left: 30px;
+  }
+  .apo-fp-photo-stream #fp-nav.left {
+    margin-left: 0;
+    /* ! */
+    margin-right: 30px;
+  }
+  .apo-fp-photo-stream .apo-photo-stream-actions {
+    left: auto;
+    right: 55px;
+  }
+}
+
+@media all and (max-width: 1199px) {
+  .apo-has-children > .apo-sub-menu.apo-reverse {
+    right: auto;
+    left: 0;
+  }
+}
+
+/* ------------------------------------------------------
+        12.2. Tablet (portait)
+    ------------------------------------------------------ */
+@media all and (max-width: 991px) {
+  .apo-tabs.apo-vertical-tabs .apo-tabs-nav {
+    margin-right: 0;
+    /* ! */
+    margin-left: 20px;
+  }
+  .apo-full-page-fixed-content .apo-full-page-container {
+    padding-left: 50px;
+    padding-right: 30px;
+  }
+  .apo-full-page-fixed-content #fp-nav.right {
+    right: 20px;
+    left: auto;
+  }
+  .apo-full-page-fixed-content #fp-nav.left {
+    right: auto;
+    left: 20px;
+  }
+  .apo-header:not(.apo-header-vertical) .apo-header-component-first,
+  .apo-header:not(.apo-header-vertical) .apo-header-component-middle,
+  .apo-header:not(.apo-header-vertical) .apo-header-component-last, .apo-header:not(.apo-header-vertical).apo-header-transparent .apo-header-component-first,
+  .apo-header:not(.apo-header-vertical).apo-header-transparent .apo-header-component-middle,
+  .apo-header:not(.apo-header-vertical).apo-header-transparent .apo-header-component-last, .apo-header:not(.apo-header-vertical).apo-header-bottom .apo-header-component-first,
+  .apo-header:not(.apo-header-vertical).apo-header-bottom .apo-header-component-middle,
+  .apo-header:not(.apo-header-vertical).apo-header-bottom .apo-header-component-last {
+    text-align: center;
+  }
+  .apo-fp-photo-stream #fp-nav.right {
+    margin-left: 0px;
+  }
+  .apo-contact-info-section .apo-contact-info a {
+    background-position: 100% 29px;
+  }
+  .apo-fp-photo-stream #fp-nav.left {
+    margin-right: 0px;
+  }
+  .apo-fp-photo-stream .apo-photo-stream-actions {
+    left: auto;
+    right: 20px;
+  }
+  .apo-has-full-page-controls .apo-full-page-container .container {
+    padding-left: 20px;
+  }
+  .apo-page-header-column:first-child:not(:only-child),
+  .apo-page-header-column:last-child:not(:only-child) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .apo-page-header-column:last-child:not(:only-child) {
+    text-align: initial;
+  }
+  .apo-fh-article-media, .apo-fh-article-content {
+    right: auto;
+  }
+  .apo-fh-article-content {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+/* ------------------------------------------------------
+        12.3. Phone (landscape)
+    ------------------------------------------------------ */
+@media all and (max-width: 767px) {
+  .apo-fixed-content-fixed-col {
+    left: auto;
+    right: 0;
+  }
+  .apo-has-children .apo-has-children > a {
+    padding-left: 0;
+    /* ! */
+    padding-right: 30px;
+  }
+  body.apo-header-vertical-left, body.apo-header-vertical-right {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .apo-fixed-content-fixed-col {
+    left: auto;
+    right: 0;
+  }
+  .apo-fixed-content-fixed-col,
+  .apo-fixed-content-scroll-col,
+  .apo-fixed-content-fixed-col + .apo-fixed-content-scroll-col {
+    padding: 55px 30px;
+  }
+  .apo-fixed-content-fixed-col + .apo-fixed-content-scroll-col {
+    padding-top: 0;
+  }
+
+  .apo-revslider-theme .apo-revslider-controls {
+    left: auto;
+    right: 30px;
+  }
+
+  .apo-revslider-theme .apo-revslider-controls.apo-right {
+    right: auto;
+    left: 30px;
+  }
+}
+
+/* ------------------------------------------------------
+        12.4. Phone (portait)
+    ------------------------------------------------------ */
+@media all and (max-width: 479px) {
+  .apo-tabs.apo-vertical-tabs .apo-tabs-nav {
+    float: none;
+    margin-left: 0;
+  }
+}
