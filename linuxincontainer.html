@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <!-- Basic page needs-->
-    <title>Virtualization</title>
+    <title>LinuxContainer</title>
     <meta charset="UTF-8"/>
     <meta name="author" content=""/>
     <meta name="description" content=""/>
@@ -54,22 +54,21 @@
                 <a class="nav-link" href="./about.html">About</a>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link active dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown"
+                <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown"
                    aria-haspopup="true" aria-expanded="false">Blogs<span class="sr-only">(current)</span></a>
                 <div class="dropdown-menu" aria-labelledby="dropdown01">
                     <a class="dropdown-item" href="./containerization.html">Containerization</a>
-                    <a class="dropdown-item active" href="#">Virtualization</a>
+                    <a class="dropdown-item" href="./vm.html">Virtualization</a>
                     <a class="dropdown-item" href="./vmVScontainer.html">VmVsContainer</a>
                 </div>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="dropdown02" data-toggle="dropdown"
+                <a class="nav-link active dropdown-toggle" href="#" id="dropdown02" data-toggle="dropdown"
                    aria-haspopup="true" aria-expanded="false">Tutorials<span class="sr-only">(current)</span></a>
                 <div class="dropdown-menu" aria-labelledby="dropdown02">
                     <a class="dropdown-item" href="./serverdocker.html">Server With Docker</a>
-                    <a class="dropdown-item" href="./linuxincontainer.html">Linux In Container</a>
+                    <a class="dropdown-item active" href="#">Linux In Container</a>
                     <a class="dropdown-item" href="#">Docker with Pycharm</a>
-
                 </div>
             </li>
         </ul>
@@ -82,64 +81,105 @@
             <!-- Article-->
             <article class="apo-entry apo-single">
                 <!-- Article Media-->
-                <div class="apo-entry-media"><img src="images/pexels-photo-2777898.jpeg" alt=""/></div>
+                <div class="apo-entry-media"><img src="images/first-lic.jpg" alt=""/></div>
                 <!-- End of Article Media-->
                 <!-- Article Content-->
                 <div class="apo-entry-content-wrap">
                     <header class="apo-entry-header">
-                        <h2 class="apo-entry-title">People</h2>
+                        <h2 class="apo-entry-title">Linux In Container</h2>
                         <ul class="apo-entry-meta">
-                            <li>Author: <a href="#">Sheethal</a></li>
-                            <li>Published in: <a href="#">17 October, 2020</a></li>
-                            <li>Categories: <a href="#">VM</a>, <a href="#">Internet</a></li>
+                            <li>Author: <a href="#">Jedidiah</a></li>
+                            <li>Published in: <a href="#">20 October 2020</a></li>
+                            <li>Categories: <a href="#">Linux</a>, <a href="#">Container</a></li>
                         </ul>
                     </header>
                     <div class="apo-entry-content">
-                        <p>Virtualization is all about creating a virtual, instead of actual, version of computer
-                            hardware platforms, storage devices, and computer network resources in the computing world.
-                            It requires division of hardware partitions and distributing among the virtual machines
-                            present. This is a resource intensive process. This method requires logical division of
-                            system resources provided by mainframe computers between applications.  .</p>
-                        <p>Hardware virtualization or platform virtualization refers to the creation of a virtual
-                            machine that acts like a real computer with operating system. Hardware resources are
-                            separated from software executed on these virtual machines. An example would be, a computer
-                            might have Microsoft Windows base OS on top of underlying hardware, and the same computer
-                            may virtually host Ubuntu Linux operating system, where Ubuntu software can be run on the
-                            virtual machine.</p>
-                        <div class="wp-caption"><img src="images/virtual-app.jpg
-" alt=""/></div>
-                        <p>There are two types of virtualization. One, full virtualization; it is a complete simulation
-                            of the actual hardware to allow software environments, including guest operating system and
-                            its apps, to run unmodified. Paravirtualization refers to a situation here guest apps are
-                            executed in their own isolated domains, as if they are running on a separate system, but a
-                            hardware environment is not simulated. Guest programs are required to be modified with
-                            specifics to run in this environment.  .</p>
-                        <p>The main common goal of virtualization is to centralize administrative tasks while improving
-                            scalability and overall hardware-resource utilization. Parallelization of several operating
-                            systems on a single CPU is the main benefit of Virtualization. Parallelism helps reduce
-                            overhead costs and differs from multitasking, involving running of several programs on the
-                            same OS. With Virtualization, enterprises can better manage updates and rapid changes to the
-                            operating system and applications without disruption to the user.</p>
-                        <p>Saved state of virtual machine is called a snapshot, of an exact point of storage. A snapshot
-                            enables the virtual machine’s state at the time of the snapshot to be restored later,
-                            effectively undoing any changes that occurred afterwards. This is essentially a backup
-                            technique, for example, prior to performing a risky operation. Snapshot benefits include
-                            the ability to port it over to another host machine with its own hypervisor. . </p>
-                        <p>If VM temporarily stops, one can snapshot, move to another host, and then resume on the
-                            new host. This method is called migration.
-                            On the other hand, failover,allows VM to continue operations if the host fails. Generally
-                            it occurs if the migration has stopped working.
-                            .</p>
-                        <div class="wp-caption"><img src="images/webdepth.jpeg" alt=""/></div>
-                        <p>Nested Virtualization enables running virtual machine within another VM. As a concept, it is
-                            extendable to an arbitrary depth. It allows running one or multiple hypervisors inside
-                            another hypervisor. The way nested virtualization can be implemented on a particular
-                            computer architecture depends on supported hardware-assisted virtualization capabilities.
-                            In case a device does not support hardware resources to enable nested virtualization,
-                            software techniques are required to enable it.  </p>
-                        <p> Virtual machines running proprietary operating systems require licensing, regardless of the
-                            host machine's operating system.</p>
-                    </div>
+                        <p>In this tutorial we will learn how to use predefined environments (Docker) with  some basic
+                            linux commands, as
+                            well as basic skills of the command line.</p>
+
+                        <h1></h1>
+                        <h2>Docker</h2>
+                        <p>
+                            Many developers are struggling with the deployment of their programs. Sometimes it is easy to deliver a
+                            program, but to deliver the running environment for that program is not that easy. Docker is the delivery
+                            of environments, and we can also use these predefined environments to run specific programs, such as
+                            Ubuntu and Apache (a server end program). Docker is a sort of flexible “virtual machine”, providing the
+                            minimum environment for your programs, and the environment has little relationship with the host/local
+                            physical machine.
+
+                        </p>
+                        <h2></h2>
+                        <h2>Install Docker to your PC</h2>
+                        <p>In this tutorial, I am going to install docker in Windows and Mac</p>
+                        <ol>
+                            <li><p>Install <a href="https://docs.docker.com/engine/install/" target="_blank">Docker</a>. The only
+                                component we have to install. Download the installer from the <a
+                                        href="https://docs.docker.com/docker-for-windows/install/" target="_blank">Windows, </a>
+                                <a
+                                        href="https://docs.docker.com/docker-for-mac/install/" target="_blank">Mac
+                                </a> download
+                                page and run it. After the installation, reboot the computer.</p></li>
+                        </ol>
+                        <p>You can also refer  <a
+                                href="serverdocker.html">Docker Tutorial
+                        </a>for step by step method explaining
+                            how to install the docker version to your workstation.
+                        </p>
+                        <h1></h1>
+                        <h2>To Get Started</h2>
+                        <p>In order to get started we have to pull the ubuntu image inside the commandline (windows),
+                            Terminal (linux).</p>
+                        <p>
+                            1. Pull that image and run.
+                            Possible command:<strong> docker pull ubuntu </strong>
+                        </p>
+                        <img src="images/1.JPG" alt=""/>
+                        <h1></h1>
+                        <p>2. Use “docker images” to check existing Docker images on your computer.
+                        </p>
+                        <p>3. Commit Changes To A Docker Image</p>
+                        <p>Run the Ubuntu image to start a Docker container, then log into this Ubuntu
+                            container</p>
+                        <p>Command: docker run -it ubuntu:<strong>latest /bin/bash</strong></p>
+                        <p>To install applications in linux container we can use the command <strong>apt-get update</strong></p>
+                        <img src="images/2.JPG" alt=""/>
+                        <h1></h1>
+                        <p>To install the apache server inside linux container use the command <strong>apt-get install apache2</strong></p>
+                        <p>There may be various text editors used. But one of the most common used editor is vim.
+                        To install vim use the command <strong>apt-get install vim</strong></p>
+                        <img src="images/3.JPG" alt=""/>
+                        <h1></h1>
+                        <p>After finishing the process we can type <strong>exit</strong> to close the ubuntu container.</p>
+                        <p>We can commit the container to create the new container with pre-installed applications. In
+                            order to check the using command <strong>docker ps -a</strong></p>
+                        <p>We can create the docker image using the command <strong>docker commit [ContainerID] ubuntu-my_apache2</strong></p>
+                        <p>To check the docker image simply type <strong>docker images</strong>.</p>
+
+                        <img src="images/4.JPG" alt=""/>
+                        <h1></h1>
+                        <h3>Data between container and host</h3>
+                        <p>We can use the command <strong>docker run -it -p 127.0.0.1:80:80 -v C:\Users\MyUserName\.docker:/var/www/html ubuntu-my_apache2 /bin/bash</strong> for
+                        windows</p>
+                        <p>If we have to use for mac we can type <strong>docker run -it -p 127.0.0.1:80:80 -v ~/Users/MyUserName/.docker:/var/www/html ubuntu-my_apache2 /bin/bash</strong>
+                        </p>
+                        <img src="images/5.JPG" alt=""/>
+                        <h1></h1>
+                        <h3>Vi editor</h3>
+                        <p>check the present working directory using <strong>pwd</strong> then go the html directory “/var/www/html”
+                            using <strong>cd /var/www/html</strong></p>
+                        <p>create an “index.html” file using <strong>vi index.html</strong></p>
+                        <p> Press <strong>i</strong> key to edit the new “index. Html”
+                            file. </p>
+                        <img src="images/i.JPG" alt=""/>
+                        <h1></h1>
+                        <p>, press the <strong>ESC</strong>> key of your computer then type <strong>:wq</strong>> to write the
+                            file and then quit vi</p>
+                        <p>To start apache service type <strong>/etc/init.d/apache2 restart</strong> in your Docker container</p>
+                        <img src="images/6.JPG" alt=""/>
+                        <h1></h1>
+                        <p>These are some of the linux commands used to access and utilize the linux container in Docker.</p>
+                        <h1></h1>
                     <footer class="apo-entry-footer">
                         <div class="row apo-table-row-md">
                             <div class="col-md-6">
