@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <!-- Basic page needs-->
-    <title>LinuxContainer</title>
+    <title>DockerPycharm</title>
     <meta charset="UTF-8"/>
     <meta name="author" content=""/>
     <meta name="description" content=""/>
@@ -67,8 +67,8 @@
                    aria-haspopup="true" aria-expanded="false">Tutorials<span class="sr-only">(current)</span></a>
                 <div class="dropdown-menu" aria-labelledby="dropdown02">
                     <a class="dropdown-item" href="./serverdocker.html">Server With Docker</a>
-                    <a class="dropdown-item active" href="#">Linux In Container</a>
-                    <a class="dropdown-item" href="dockerpycharm.html">Docker with Pycharm</a>
+                    <a class="dropdown-item" href="linuxincontainer.html">Linux In Container</a>
+                    <a class="dropdown-item active" href="#">Docker with Pycharm</a>
                 </div>
             </li>
         </ul>
@@ -81,22 +81,22 @@
             <!-- Article-->
             <article class="apo-entry apo-single">
                 <!-- Article Media-->
-                <div class="apo-entry-media"><img src="images/first-lic.jpg" alt=""/></div>
+                <div class="apo-entry-media"><img src="images/first-dp.jpg" alt=""/></div>
                 <!-- End of Article Media-->
                 <!-- Article Content-->
                 <div class="apo-entry-content-wrap">
                     <header class="apo-entry-header">
-                        <h2 class="apo-entry-title">Linux In Container</h2>
+                        <h2 class="apo-entry-title">Docker with Pycharm</h2>
                         <ul class="apo-entry-meta">
                             <li>Author: <a href="#">Jedidiah</a></li>
                             <li>Published in: <a href="#">20 October 2020</a></li>
-                            <li>Categories: <a href="#">Linux</a>, <a href="#">Container</a></li>
+                            <li>Categories: <a href="#">Docker</a>, <a href="#">Pycharm</a></li>
                         </ul>
                     </header>
                     <div class="apo-entry-content">
-                        <p>In this tutorial we will learn how to use predefined environments (Docker) with  some basic
-                            linux commands, as
-                            well as basic skills of the command line.</p>
+                        <p>In this tutorial we will learn how to use pycharm along with Docker and we are also
+                        going to learn how to use the docker as a interpreter in pycharm for compiling
+                        the code.</p>
 
                         <h1></h1>
                         <h2>Docker</h2>
@@ -107,7 +107,13 @@
                             Ubuntu and Apache (a server end program). Docker is a sort of flexible “virtual machine”, providing the
                             minimum environment for your programs, and the environment has little relationship with the host/local
                             physical machine.
-
+                        </p>
+                        <h2>Pycharm</h2>
+                        <p>
+                            PyCharm is an integrated development environment (IDE) used in computer programming, specifically for the Python language. It is developed by the Czech company JetBrains.
+                            It provides code analysis, a graphical debugger, an integrated unit tester, integration with version control systems (VCSes), and supports web development with Django as well as data science with Anaconda.
+                            PyCharm is cross-platform, with Windows, macOS and Linux versions. The Community Edition is released under the Apache License,[8] and there is also Professional Edition with extra features – released under a proprietary license.
+                            We are mostly going to use the pycharm professional as they provide it free for the students.
                         </p>
                         <h2></h2>
                         <h2>Install Docker to your PC</h2>
@@ -128,103 +134,118 @@
                         </p>
                         <h1></h1>
                         <h2>To Get Started</h2>
-                        <p>In order to get started we have to pull the ubuntu image inside the commandline (windows),
-                            Terminal (linux).</p>
+                        <p>In order to get started open the pycharm and run the docker desktop</p>
                         <p>
-                            1. Pull that image and run.
-                            Possible command:<strong> docker pull ubuntu </strong>
+                            1. Click on<strong> File --> Settings --> Build, Execution, Deployment --> Docker </strong>
                         </p>
-                        <img src="images/1.JPG" alt=""/>
+                        <img src="images/dp1.JPG" alt=""/>
                         <h1></h1>
-                        <p>2. Use “docker images” to check existing Docker images on your computer.
+                        <p>2. Select the docker and add the docker container inside the window using <strong>+</strong> icon
                         </p>
-                        <p>3. Commit Changes To A Docker Image</p>
-                        <p>Run the Ubuntu image to start a Docker container, then log into this Ubuntu
-                            container</p>
-                        <p>Command: docker run -it ubuntu:<strong>latest /bin/bash</strong></p>
-                        <p>To install applications in linux container we can use the command <strong>apt-get update</strong></p>
-                        <img src="images/2.JPG" alt=""/>
+                        <img src="images/dp2.JPG" alt=""/>
                         <h1></h1>
-                        <p>To install the apache server inside linux container use the command <strong>apt-get install apache2</strong></p>
-                        <p>There may be various text editors used. But one of the most common used editor is vim.
-                        To install vim use the command <strong>apt-get install vim</strong></p>
-                        <img src="images/3.JPG" alt=""/>
+                        <p>3. Once the connection is successful now we can create the <strong>Dockerfile</strong> without
+                        any file extension</p>
+                        <img src="images/dp3.JPG" alt=""/>
                         <h1></h1>
-                        <p>After finishing the process we can type <strong>exit</strong> to close the ubuntu container.</p>
-                        <p>We can commit the container to create the new container with pre-installed applications. In
-                            order to check the using command <strong>docker ps -a</strong></p>
-                        <p>We can create the docker image using the command <strong>docker commit [ContainerID] ubuntu-my_apache2</strong></p>
-                        <p>To check the docker image simply type <strong>docker images</strong>.</p>
+                        <p>Type the following code in the Dockerfile
+                        </p>
+                        <pre>
+                            <code>FROM python:3
 
-                        <img src="images/4.JPG" alt=""/>
-                        <h1></h1>
-                        <h3>Data between container and host</h3>
-                        <p>We can use the command <strong>docker run -it -p 127.0.0.1:80:80 -v C:\Users\MyUserName\.docker:/var/www/html ubuntu-my_apache2 /bin/bash</strong> for
-                        windows</p>
-                        <p>If we have to use for mac we can type <strong>docker run -it -p 127.0.0.1:80:80 -v ~/Users/MyUserName/.docker:/var/www/html ubuntu-my_apache2 /bin/bash</strong>
+                            ADD src /src
+
+                            RUN pip install pystrich
+
+                            CMD [ "python", "./src/myscript.py" ]</code>
+                        </pre>
+                        <p>commit the changes</p>
+                        <p>create the <strong>myscript.py</strong>(it has to be reference of file we entered inside Dockerfile.
                         </p>
-                        <img src="images/5.JPG" alt=""/>
+                        <img src="images/dp3.JPG" alt=""/>
                         <h1></h1>
-                        <h3>Vi editor</h3>
-                        <p>check the present working directory using <strong>pwd</strong> then go the html directory “/var/www/html”
-                            using <strong>cd /var/www/html</strong></p>
-                        <p>create an “index.html” file using <strong>vi index.html</strong></p>
-                        <p> Press <strong>i</strong> key to edit the new “index. Html”
-                            file. </p>
-                        <img src="images/i.JPG" alt=""/>
+                        <p>Type the following code in the myscript.py
+                        </p>
+                        <pre>
+    <code># Sample taken from pyStrich GitHub repository
+    # https://github.com/mmulqueen/pyStrich
+    from pystrich.datamatrix import DataMatrixEncoder
+    encoder = DataMatrixEncoder('This is a DataMatrix.')
+    encoder.save('./datamatrix_test.png')
+    print(encoder.get_ascii())</code>
+                        </pre>
+                        <p>Commit the changes</p>
+                        <p>In order to run the configuration, first we have to press on Edit <strong>Run/Debug Configuration</strong></p>
+                        <p>Click on the <strong>+</strong> mark and then click on <strong>Dockerfile</strong></p>
+                        <img src="images/dp4.JPG" alt=""/>
                         <h1></h1>
-                        <p>, press the <strong>ESC</strong>> key of your computer then type <strong>:wq</strong>> to write the
-                            file and then quit vi</p>
-                        <p>To start apache service type <strong>/etc/init.d/apache2 restart</strong> in your Docker container</p>
-                        <img src="images/6.JPG" alt=""/>
+                        <p>As the Dockerfile is selected we have to edit the configurations as</p>
+                        <oi>
+                            <li>Dockerfile: Dockerfile</li>
+                            <li>imagetag: pythonprogramimage</li>
+                            <li>container name: firstpythoncontainer</li>
+                            <li>Select the <strong>Run Build Image</strong></li>
+                        </oi>
+                        <p>As we selected everything click on <strong>apply and ok</strong></p>
+                        <img src="images/dp5.JPG" alt=""/>
                         <h1></h1>
-                        <p>These are some of the linux commands used to access and utilize the linux container in Docker.</p>
-                        <iframe width="720" height="360" src="https://www.youtube.com/embed/YFl2mCHdv24" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <p>When we press Run Dockerfile. The docker service start running installing the necessary packages and the file is output</p>
+                        <img src="images/dp6.JPG" alt=""/>
                         <h1></h1>
-                    <footer class="apo-entry-footer">
-                        <div class="row apo-table-row-md">
-                            <div class="col-md-6">
-                                <div class="apo-inline-block">
-                                    <div class="apo-named-element"><span class="apo-named-element-caption">Next: </span>
-                                        <div class="apo-named-element-container">
-                                            <ul class="apo-entry-tags">
-                                                <li><a href="./vm.html">Vir</a></li>
-                                                <li><a href="./vmVScontainer.html">VirVsCon</a></li>
-                                                <li><a href="./containerization.html">Con</a></li>
-                                            </ul>
+                        <p>As all the process is done successfully. The interpreter can be added by clicking on edit python intepreter</p>
+                        <img src="images/dp7.JPG" alt=""/>
+                        <h1></h1>
+                        <p>As we click on add interpreter select <strong>Docker --> [image name: pythonprogramimage]</strong> which is same as the image tag
+                        of the intepreter used to run Dockerfile</p>
+                        <img src="images/dp8.JPG" alt=""/>
+                        <h1></h1>
+                        <p>Commit and push the changes to github</p>
+                        <iframe width="720" height="360" src="https://www.youtube.com/embed/5zua74p6vjU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                       <h1></h1>
+                        <footer class="apo-entry-footer">
+                            <div class="row apo-table-row-md">
+                                <div class="col-md-6">
+                                    <div class="apo-inline-block">
+                                        <div class="apo-named-element"><span class="apo-named-element-caption">Next: </span>
+                                            <div class="apo-named-element-container">
+                                                <ul class="apo-entry-tags">
+                                                    <li><a href="./vm.html">Vir</a></li>
+                                                    <li><a href="./vmVScontainer.html">VirVsCon</a></li>
+                                                    <li><a href="./containerization.html">Con</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="apo-inline-block">
+                                        <div class="apo-named-element"><span
+                                                class="apo-named-element-caption">Contact Us:</span>
+                                            <div class="apo-named-element-container">
+                                                <!-- Social Networks-->
+                                                <ul class="apo-social-networks">
+                                                    <li><a href="https://github.com/ssm29njit"
+                                                           class="button button-icon radius-full margin-r-10 color-button-white border-glass"><i
+                                                            class="fab fa-github">S</i></a></li>
+                                                    <li><a href="https://github.com/JedidiahJohnNagarajan"
+                                                           class="button button-icon radius-full margin-r-10 color-button-white border-glass"><i
+                                                            class="fab fa-github">J</i></a></li>
+                                                    <li><a href="https://www.linkedin.com/in/sheethal-mathew-4579a0a5/"
+                                                           class="button button-icon radius-full margin-r-10 color-button-white border-glass"><i
+                                                            class="fab fa-linkedin">S</i></a></li>
+                                                    <li><a href="https://www.linkedin.com/in/jedidiahjohn/"
+                                                           class="button button-icon radius-full margin-r-10 color-button-white border-glass"><i
+                                                            class="fab fa-linkedin">J</i></a></li>
+                                                </ul>
+                                                <!-- End Social Networks-->
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-6">
-                                <div class="apo-inline-block">
-                                    <div class="apo-named-element"><span
-                                            class="apo-named-element-caption">Contact Us:</span>
-                                        <div class="apo-named-element-container">
-                                            <!-- Social Networks-->
-                                            <ul class="apo-social-networks">
-                                                <li><a href="https://github.com/ssm29njit"
-                                                       class="button button-icon radius-full margin-r-10 color-button-white border-glass"><i
-                                                        class="fab fa-github">S</i></a></li>
-                                                <li><a href="https://github.com/JedidiahJohnNagarajan"
-                                                       class="button button-icon radius-full margin-r-10 color-button-white border-glass"><i
-                                                        class="fab fa-github">J</i></a></li>
-                                                <li><a href="https://www.linkedin.com/in/sheethal-mathew-4579a0a5/"
-                                                       class="button button-icon radius-full margin-r-10 color-button-white border-glass"><i
-                                                        class="fab fa-linkedin">S</i></a></li>
-                                                <li><a href="https://www.linkedin.com/in/jedidiahjohn/"
-                                                       class="button button-icon radius-full margin-r-10 color-button-white border-glass"><i
-                                                        class="fab fa-linkedin">J</i></a></li>
-                                            </ul>
-                                            <!-- End Social Networks-->
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </footer>
-                </div>
-                <!-- End of Article Content-->
+                        </footer>
+                    </div>
+                    <!-- End of Article Content-->
             </article>
             <!-- End Article-->
         </div>
