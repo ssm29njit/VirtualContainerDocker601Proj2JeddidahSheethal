@@ -1,5 +1,5 @@
 # Virtual Container Docker
-History of Internet, dot com boom, monopoly of Microsoft, is all explained here
+Virtualization, Contanerization, Virtualization vs Containerization, Server with Docker tutorial, Linux using Container Docker tutorial, Docker with pycharm tutorial were all explained here
 
 #### This site was intended to educate people about virtualization, Containerization and their differences. This also contains tutorials. Topics covered include Virtualization, Contanerization, Virtualization vs Containerization, Server with Docker tutorial, Linux using Container Docker tutorial, Docker with pycharm tutorial. This is a non profit website used for educational purposes only! This was a class assignment for IS 601 with Keith Williams
 
