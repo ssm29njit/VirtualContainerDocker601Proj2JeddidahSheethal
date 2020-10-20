@@ -8,5 +8,5 @@ Virtualization, Contanerization, Virtualization vs Containerization, Server with
 
 
 <p align="center">
-  https://jedidiahjohnnagarajan.github.io/VirtualContainerDocker601Proj2JeddidahSheethal/
+  https://ssm29njit.github.io/VirtualContainerDocker601Proj2JeddidahSheethal/
 </p>
