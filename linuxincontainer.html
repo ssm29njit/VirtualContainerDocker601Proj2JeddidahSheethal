@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Basic page needs-->
+    <title>LinuxContainer</title>
+    <meta charset="UTF-8"/>
+    <meta name="author" content=""/>
+    <meta name="description" content=""/>
+    <meta name="keywords" content=""/>
+    <!-- Mobile specific metas-->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="images/favicon.ico"/>
+    <!-- Google Web Fonts-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Unna"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli"/>
+    <!-- Vendor CSS-->
+    <!-- Theme CSS-->
+    <link rel="stylesheet" media="all" href="css/style.css"/>
+    <link rel="stylesheet" media="all" href="css/bootstrap.temp.css"/>
+    <!-- Vendor JS-->
+    <script src="vendors/modernizr.js"></script>
+
+    <!-- From index -->
+    <link rel="stylesheet" href="css/bounce.css">
+    <link rel="stylesheet" href="fonticons/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+</head>
+
+
+<body class="apo-header-vertical-left">
+<!-- Preloader-->
+<div id="loader">
+    <div class="load-three-bounce">
+        <div class="load-child bounce1"></div>
+        <div class="load-child bounce2"></div>
+        <div class="load-child bounce3"></div>
+    </div>
+</div>
+<nav class="navbar navbar-expand-md fixed-top navbar-dark bg-dark">
+    <a href="./index.html" class="logo-wrapper margin-l-30 margin-t-30"
+       data-ckav-smd="margin-t-10 margin-l-10 margin-b-10 width-px-60">
+        <img src="images/logo-blog.png" alt="page">
+    </a>
+    <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="./index.html">Home </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./about.html">About</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown"
+                   aria-haspopup="true" aria-expanded="false">Blogs<span class="sr-only">(current)</span></a>
+                <div class="dropdown-menu" aria-labelledby="dropdown01">
+                    <a class="dropdown-item" href="./containerization.html">Containerization</a>
+                    <a class="dropdown-item" href="./vm.html">Virtualization</a>
+                    <a class="dropdown-item" href="./vmVScontainer.html">VmVsContainer</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link active dropdown-toggle" href="#" id="dropdown02" data-toggle="dropdown"
+                   aria-haspopup="true" aria-expanded="false">Tutorials<span class="sr-only">(current)</span></a>
+                <div class="dropdown-menu" aria-labelledby="dropdown02">
+                    <a class="dropdown-item" href="./serverdocker.html">Server With Docker</a>
+                    <a class="dropdown-item active" href="#">Linux In Container</a>
+                    <a class="dropdown-item" href="#">Docker with Pycharm</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container">
+    <main class="apo-section apo-section-thin">
+
+        <div class="apo-section apo-medium">
+            <!-- Article-->
+            <article class="apo-entry apo-single">
+                <!-- Article Media-->
+                <div class="apo-entry-media"><img src="images/first-lic.jpg" alt=""/></div>
+                <!-- End of Article Media-->
+                <!-- Article Content-->
+                <div class="apo-entry-content-wrap">
+                    <header class="apo-entry-header">
+                        <h2 class="apo-entry-title">Linux In Container</h2>
+                        <ul class="apo-entry-meta">
+                            <li>Author: <a href="#">Jedidiah</a></li>
+                            <li>Published in: <a href="#">20 October 2020</a></li>
+                            <li>Categories: <a href="#">Linux</a>, <a href="#">Container</a></li>
+                        </ul>
+                    </header>
+                    <div class="apo-entry-content">
+                        <p>In this tutorial we will learn how to use predefined environments (Docker) with  some basic
+                            linux commands, as
+                            well as basic skills of the command line.</p>
+
+                        <h1></h1>
+                        <h2>Docker</h2>
+                        <p>
+                            Many developers are struggling with the deployment of their programs. Sometimes it is easy to deliver a
+                            program, but to deliver the running environment for that program is not that easy. Docker is the delivery
+                            of environments, and we can also use these predefined environments to run specific programs, such as
+                            Ubuntu and Apache (a server end program). Docker is a sort of flexible “virtual machine”, providing the
+                            minimum environment for your programs, and the environment has little relationship with the host/local
+                            physical machine.
+
+                        </p>
+                        <h2></h2>
+                        <h2>Install Docker to your PC</h2>
+                        <p>In this tutorial, I am going to install docker in Windows and Mac</p>
+                        <ol>
+                            <li><p>Install <a href="https://docs.docker.com/engine/install/" target="_blank">Docker</a>. The only
+                                component we have to install. Download the installer from the <a
+                                        href="https://docs.docker.com/docker-for-windows/install/" target="_blank">Windows, </a>
+                                <a
+                                        href="https://docs.docker.com/docker-for-mac/install/" target="_blank">Mac
+                                </a> download
+                                page and run it. After the installation, reboot the computer.</p></li>
+                        </ol>
+                        <p>You can also refer  <a
+                                href="serverdocker.html">Docker Tutorial
+                        </a>for step by step method explaining
+                            how to install the docker version to your workstation.
+                        </p>
+                        <h1></h1>
+                        <h2>To Get Started</h2>
+                        <p>In order to get started we have to pull the ubuntu image inside the commandline (windows),
+                            Terminal (linux).</p>
+                        <p>
+                            1. Pull that image and run.
+                            Possible command:<strong> docker pull ubuntu </strong>
+                        </p>
+                        <img src="images/1.JPG" alt=""/>
+                        <h1></h1>
+                        <p>2. Use “docker images” to check existing Docker images on your computer.
+                        </p>
+                        <p>3. Commit Changes To A Docker Image</p>
+                        <p>Run the Ubuntu image to start a Docker container, then log into this Ubuntu
+                            container</p>
+                        <p>Command: docker run -it ubuntu:<strong>latest /bin/bash</strong></p>
+                        <p>To install applications in linux container we can use the command <strong>apt-get update</strong></p>
+                        <img src="images/2.JPG" alt=""/>
+                        <h1></h1>
+                        <p>To install the apache server inside linux container use the command <strong>apt-get install apache2</strong></p>
+                        <p>There may be various text editors used. But one of the most common used editor is vim.
+                        To install vim use the command <strong>apt-get install vim</strong></p>
+                        <img src="images/3.JPG" alt=""/>
+                        <h1></h1>
+                        <p>After finishing the process we can type <strong>exit</strong> to close the ubuntu container.</p>
+                        <p>We can commit the container to create the new container with pre-installed applications. In
+                            order to check the using command <strong>docker ps -a</strong></p>
+                        <p>We can create the docker image using the command <strong>docker commit [ContainerID] ubuntu-my_apache2</strong></p>
+                        <p>To check the docker image simply type <strong>docker images</strong>.</p>
+
+                        <img src="images/4.JPG" alt=""/>
+                        <h1></h1>
+                        <h3>Data between container and host</h3>
+                        <p>We can use the command <strong>docker run -it -p 127.0.0.1:80:80 -v C:\Users\MyUserName\.docker:/var/www/html ubuntu-my_apache2 /bin/bash</strong> for
+                        windows</p>
+                        <p>If we have to use for mac we can type <strong>docker run -it -p 127.0.0.1:80:80 -v ~/Users/MyUserName/.docker:/var/www/html ubuntu-my_apache2 /bin/bash</strong>
+                        </p>
+                        <img src="images/5.JPG" alt=""/>
+                        <h1></h1>
+                        <h3>Vi editor</h3>
+                        <p>check the present working directory using <strong>pwd</strong> then go the html directory “/var/www/html”
+                            using <strong>cd /var/www/html</strong></p>
+                        <p>create an “index.html” file using <strong>vi index.html</strong></p>
+                        <p> Press <strong>i</strong> key to edit the new “index. Html”
+                            file. </p>
+                        <img src="images/i.JPG" alt=""/>
+                        <h1></h1>
+                        <p>, press the <strong>ESC</strong>> key of your computer then type <strong>:wq</strong>> to write the
+                            file and then quit vi</p>
+                        <p>To start apache service type <strong>/etc/init.d/apache2 restart</strong> in your Docker container</p>
+                        <img src="images/6.JPG" alt=""/>
+                        <h1></h1>
+                        <p>These are some of the linux commands used to access and utilize the linux container in Docker.</p>
+                        <h1></h1>
+                    <footer class="apo-entry-footer">
+                        <div class="row apo-table-row-md">
+                            <div class="col-md-6">
+                                <div class="apo-inline-block">
+                                    <div class="apo-named-element"><span class="apo-named-element-caption">Next: </span>
+                                        <div class="apo-named-element-container">
+                                            <ul class="apo-entry-tags">
+                                                <li><a href="./vm.html">Vir</a></li>
+                                                <li><a href="./vmVScontainer.html">VirVsCon</a></li>
+                                                <li><a href="./containerization.html">Con</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="apo-inline-block">
+                                    <div class="apo-named-element"><span
+                                            class="apo-named-element-caption">Contact Us:</span>
+                                        <div class="apo-named-element-container">
+                                            <!-- Social Networks-->
+                                            <ul class="apo-social-networks">
+                                                <li><a href="https://github.com/ssm29njit"
+                                                       class="button button-icon radius-full margin-r-10 color-button-white border-glass"><i
+                                                        class="fab fa-github">S</i></a></li>
+                                                <li><a href="https://github.com/JedidiahJohnNagarajan"
+                                                       class="button button-icon radius-full margin-r-10 color-button-white border-glass"><i
+                                                        class="fab fa-github">J</i></a></li>
+                                                <li><a href="https://www.linkedin.com/in/sheethal-mathew-4579a0a5/"
+                                                       class="button button-icon radius-full margin-r-10 color-button-white border-glass"><i
+                                                        class="fab fa-linkedin">S</i></a></li>
+                                                <li><a href="https://www.linkedin.com/in/jedidiahjohn/"
+                                                       class="button button-icon radius-full margin-r-10 color-button-white border-glass"><i
+                                                        class="fab fa-linkedin">J</i></a></li>
+                                            </ul>
+                                            <!-- End Social Networks-->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </footer>
+                </div>
+                <!-- End of Article Content-->
+            </article>
+            <!-- End Article-->
+        </div>
+        <hr/>
+    </main>
+</div>
+</div>
+<!-- End Page Content-->
+<!-- Page Content-->
+
+<!-- Footer-->
+
+<!-- Vendor JS-->
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"
+        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+<script src="vendors/handlebars-v4.0.5.js"></script>
+<script src="vendors/wt.validator.min.js"></script>
+<script src="vendors/jquery.easing.1.3.min.js"></script>
+<script src="vendors/mad.accordion.js"></script>
+<script src="vendors/mad.customselect.js"></script>
+<script src="vendors/mad.tabs.js"></script>
+<script src="vendors/wat.counters.js"></script>
+<script src="vendors/wt.jquery.nav.1.0.js"></script>
+<script src="vendors/isotope.pkgd.min.js"></script>
+<script src="vendors/imagesloaded.pkgd.min.js"></script>
+<script src="vendors/fancybox/jquery.fancybox.min.js"></script>
+<script src="vendors/appear.min.js"></script>
+<script src="vendors/owl-carousel/owl.carousel.min.js"></script>
+<script src="vendors/mCustomScrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="vendors/arcticmodal/jquery.arcticmodal-0.3.min.js"></script>
+<!-- Theme JS-->
+<script src="js/apolo.core.js"></script>
+<script src="js/modules/apolo.newsletter.js"></script>
+<script src="js/modules/apolo.sameheight.js"></script>
+<script src="js/modules/apolo.appear.js"></script>
+<script src="js/modules/apolo.isotope.js"></script>
+<script src="js/apolo.init.js"></script>
+
+
+<!-- COMMON VENDOR SCRIPTS -->
+<script src="vendor/jquery/jquery-3.3.1.min.js"></script>
+<script src="vendor/jquery/jquery-migrate-3.0.0.min.js"></script>
+<script src="vendor/popper/umd/popper.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="vendor/jquery-validation/jquery.validate.min.js"></script>
+<script src="vendor/sweetalert/sweetalert2.min.js"></script>
+<script src="vendor/jarallax/jarallax.min.js"></script>
+<script src="vendor/owlcarousel/owl.carousel.min.js"></script>
+<script src="vendor/swiper/js/swiper.min.js"></script>
+<script src="vendor/jQuery-viewport-checker/jquery.viewportchecker.min.js"></script>
+<script src="vendor/enquire/enquire.min.js"></script>
+<script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+<script src="vendor/isotope/imagesloaded.pkgd.min.js"></script>
+<script src="vendor/isotope/isotope.pkgd.min.js"></script>
+<script src="vendor/isotope/packery-mode.pkgd.min.js"></script>
+
+<!-- PAGE SPECIFIC VENDOR SCRIPTS -->
+
+<!-- TEMPLATE COMMON SCRIPTS -->
+<script src="js/page-main.js"></script>
+
+</body>
+</html>
